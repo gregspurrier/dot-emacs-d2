@@ -24,3 +24,11 @@
   (scroll-bar-mode -1)
   (set-frame-font "Input 12"))
 (column-number-mode t)
+
+(require 'smartparens-config)
+(defun lispy-mode-setup ()
+  (highlight-parentheses-mode t)
+  (smartparens-strict-mode t))
+
+(add-hook 'emacs-list-mode-hook 'lispy-mode-setup)
+(add-hook 'clojure-mode-hook 'lispy-mode-setup)
