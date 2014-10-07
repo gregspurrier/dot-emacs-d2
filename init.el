@@ -25,6 +25,10 @@
   (set-frame-font "Input 12"))
 (column-number-mode t)
 
+;; OS X
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 (require 'smartparens-config)
 (defun lispy-mode-setup ()
   (highlight-parentheses-mode t)
