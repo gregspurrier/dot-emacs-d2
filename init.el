@@ -20,5 +20,7 @@
 (load-theme 'zenburn t)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
-(when (window-system) (scroll-bar-mode -1))
+(when (window-system)
+  (scroll-bar-mode -1)
+  (set-frame-font "Input 12"))
 (column-number-mode t)
