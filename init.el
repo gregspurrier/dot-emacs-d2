@@ -36,3 +36,4 @@
 
 (add-hook 'emacs-list-mode-hook 'lispy-mode-setup)
 (add-hook 'clojure-mode-hook 'lispy-mode-setup)
+(add-hook 'cider-repl-mode-hook 'lispy-mode-setup)
