@@ -29,10 +29,9 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
-(require 'smartparens-config)
 (defun lispy-mode-setup ()
   (highlight-parentheses-mode t)
-  (smartparens-strict-mode t))
+  (paredit-mode))
 
 (add-hook 'emacs-list-mode-hook 'lispy-mode-setup)
 (add-hook 'clojure-mode-hook 'lispy-mode-setup)
