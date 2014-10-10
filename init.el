@@ -16,7 +16,7 @@
 (setq require-final-newline t)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;; Look and Feel
+;; Look and  Feel
 (load-theme 'zenburn t)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
@@ -28,6 +28,11 @@
 ;; OS X
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
+
+;; Ace Jump Mode
+(require 'ace-jump-mode)
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+
 
 (defun lispy-mode-setup ()
   (highlight-parentheses-mode t)
