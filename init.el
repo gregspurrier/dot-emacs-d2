@@ -33,6 +33,16 @@
 (require 'ace-jump-mode)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
+;; Region selection and operation
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C-c =") 'er/expand-region)
+
+(require 'change-inner)
+(global-set-key (kbd "C-c i") 'change-inner)
+(global-set-key (kbd "C-c o") 'change-outer)
+
+
 
 (defun lispy-mode-setup ()
   (highlight-parentheses-mode t)
