@@ -15,6 +15,7 @@
 (setq-default indent-tabs-mode nil)
 (setq require-final-newline t)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(setq ring-bell-function 'ignore)
 
 ;; Look and  Feel
 (load-theme 'zenburn t)
